@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-montserrat;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bebas;
+  }
+}
+
+@layer components {
+  .btn-neon {
+    @apply px-8 py-3 bg-secondary text-black font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 active:scale-95;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+  }
+
+  .btn-neon:hover {
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.8);
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 border-2 border-secondary text-secondary font-bold uppercase tracking-widest transition-all duration-300 hover:bg-secondary hover:text-black;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-sm;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+
+  .text-glow-red {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.heartbeat-pulse {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.1);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+.glow-hover:hover {
+  filter: drop-shadow(0 0 10px #39ff14);
+}
